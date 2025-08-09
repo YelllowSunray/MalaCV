@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -9,6 +10,19 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Headshot Photo */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-lg border-4 border-white">
+              <Image
+                src="/photos/headshot.jpeg"
+                alt="Mala Iyer - Systems Change Advocate"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+          
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             <span className="text-indigo-600">Humanizing</span> Systems,<br />
             <span className="text-purple-600">Empowering</span> People
